@@ -5,6 +5,10 @@
 #ifndef BOOST_TYPEOF_TEST_HPP_INCLUDED
 #define BOOST_TYPEOF_TEST_HPP_INCLUDED
 
+#ifdef _MSC_VER
+# pragma warning(disable: 4305) // 'specialization': truncation to 'bool'
+#endif
+
 #include <boost/typeof/typeof.hpp>
 #include <boost/type_traits/is_same.hpp>
 #include <boost/static_assert.hpp>
