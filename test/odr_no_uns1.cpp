@@ -12,6 +12,8 @@ void odr_no_uns1()
     odr_test_2 t2;
     BOOST_AUTO(v1, t1);
     BOOST_AUTO(v2, t2);
+	(void)v1;
+	(void)v2;
 }
 
 int main()
