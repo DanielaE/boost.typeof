@@ -42,8 +42,6 @@ BOOST_STATIC_ASSERT(boost::type_of::test<bitset<10> >::value);
 
 // function objects
 
-BOOST_STATIC_ASSERT((boost::type_of::test<unary_function<int, int> >::value));
-BOOST_STATIC_ASSERT((boost::type_of::test<binary_function<int, int, int> >::value));
 BOOST_STATIC_ASSERT(boost::type_of::test<plus<int> >::value);
 BOOST_STATIC_ASSERT(boost::type_of::test<minus<int> >::value);
 BOOST_STATIC_ASSERT(boost::type_of::test<multiplies<int> >::value);
@@ -61,8 +59,6 @@ BOOST_STATIC_ASSERT(boost::type_of::test<logical_or<int> >::value);
 BOOST_STATIC_ASSERT(boost::type_of::test<logical_not<int> >::value);
 BOOST_STATIC_ASSERT(boost::type_of::test<unary_negate<negate<int> > >::value);
 BOOST_STATIC_ASSERT(boost::type_of::test<binary_negate<less<int> > >::value);
-BOOST_STATIC_ASSERT(boost::type_of::test<binder1st<less<int> > >::value);
-BOOST_STATIC_ASSERT(boost::type_of::test<binder2nd<less<int> > >::value);
 
 // valarray
 
