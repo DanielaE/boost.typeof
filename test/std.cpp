@@ -2,6 +2,16 @@
 // Use, modification and distribution is subject to the Boost Software
 // License, Version 1.0. (http://www.boost.org/LICENSE_1_0.txt)
 
+// the tests trigger a lot of deprecation warnings when compiled with msvc in C++17 mode
+#if defined(_MSVC_LANG) && _MSVC_LANG > 201402
+// warning STL4008: std::not1(), std::not2(), std::unary_negate, and std::binary_negate are deprecated in C++17
+# define _SILENCE_CXX17_NEGATORS_DEPRECATION_WARNING
+// warning STL4011: std::raw_storage_iterator is deprecated in C++17
+# define _SILENCE_CXX17_RAW_STORAGE_ITERATOR_DEPRECATION_WARNING
+// warning STL4015: The std::iterator class template (used as a base class to provide typedefs) is deprecated in C++17
+# define _SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING
+#endif
+
 #include "test.hpp"
 
 #include <boost/typeof/std/string.hpp>
